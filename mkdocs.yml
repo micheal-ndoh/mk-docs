@@ -1,16 +1,80 @@
 # Project information
-site_name: My MkDocs Project
+site_name: PROJECT
 site_description: 'An example MkDocs project using the Material theme'
-site_url: 'https://adorsys-gis.github.io/mk-docs'  # Change this to your site's URL
+site_url: 'https://ICE.io/mk-docs'  # Change this to your site's URL
 
 # Theme settings
 theme:
   name: material
+  features: 
+   -navigation.tabs
+   -navigation.section
+   - toc.integrate 
+   - search.suggest
+   - search.highlight
+   - content.tabs.link
+   - content.code.annotation
+   - content.code.copy
+  language: en
+  palette: 
+   - scheme: default
+     toggle: 
+       icon: material/toggle-switch-off-outline
+       name: switch to dark mode
+     primary: teal
+     accent: purple
+   - scheme: slate
+     toggle: 
+       icon: material/toggle-switch
+       name: switch to light mode
+     primary: teal
+     accent: lime
+
+# extra
+  social:
+    - icon: fontawesome/brands/git-hub-alt
+      link: https://github.com/micheal-ndoh
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/micheal-ndoh/
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+    generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+     emoji_index: !!python/name:materialx.emoji.twemoji
+     emoji_generator: !!python/name:materialx.emoji.to_svg
+  - 
 
 # Navbar settings (site structure)
 nav:
   - Home: index.md
   - About: about.md
+  - SYSTEM ARCHITECTURE: SYSTEM Architecture.md
+  - VIRTUALIZATION: VIRTUALIZATION.md
+  - LINUX INSTALLATION: Linux Installation and Package Management.md
+  - PACKAGE MANAGEMENT: Package_Management.md
+  - MULTIPASS: Multipass.md
+  - SHELL SCRIPTING: SHELL-SCRIPTING.md
+  - USER MANAGEMENT: USER MANAGEMENT.md
+  - GNU: GNU.md
+  - UNIX COMMANDS: GNU & UNIX commands.md
+  - LOCALIZATION: localization.md
+  - FILE SYSTEMS: File_systems.md
+  - SCHEDULING JOBS: Schedulingjobs.md
+  - USEFUL COMMANDS: Commands.md
+  
+
+
 
 # Extra settings
 markdown_extensions:
@@ -20,6 +84,9 @@ markdown_extensions:
       permalink: true
 
 # Repository configuration (for the edit link on pages)
-repo_name: ADORSYS-GIS/mk-docs
-repo_url: https://github.com/ADORSYS-GIS/mk-docs
+repo_name: MICHEAL's
+repo_url: https://github.com/micheal-ndoh/mk-docs.git
 edit_uri: edit/main/docs/
+
+copyright: |
+&copy: 2024 <a href="https://github.com/micheal-ndoh" target="_blank" rel="noopener">MICHEAL NDOH </a>
